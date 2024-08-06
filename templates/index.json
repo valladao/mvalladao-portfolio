@@ -5,10 +5,14 @@
     },
     "banner": {
       "type": "banner"
+    },
+    "collection_list": {
+      "type": "collection-list"
     }
   },
   "order": [
     "header",
-    "banner"
+    "banner",
+    "collection_list"
   ]
 }
