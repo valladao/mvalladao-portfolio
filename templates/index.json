@@ -2,9 +2,13 @@
   "sections": {
     "header": {
       "type": "header"
+    },
+    "banner": {
+      "type": "banner"
     }
   },
   "order": [
-    "header"
+    "header",
+    "banner"
   ]
 }

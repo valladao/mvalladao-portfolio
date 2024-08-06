@@ -6,4 +6,5 @@ This repo contains the code used to generate my web developer portfolio. I decid
 
 | Sections | Description                                                  |
 | -------- | ------------------------------------------------------------ |
-| Header   | The header of the page. Plan is to be similar to a CV header |
+| Header   | Here I created an small menu                                 |
+| Banner   | The header of the page. Plan is to be similar to a CV header |
