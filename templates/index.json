@@ -12,6 +12,8 @@
     "banner": {
       "type": "banner",
       "settings": {
+        "heading": "Manoel Valladão",
+        "subheading": "Shopify Web Developer"
       }
     },
     "collection_list": {
