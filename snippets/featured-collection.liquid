@@ -1,4 +1,4 @@
-<h2>Web Developer Experience</h2>
+<h2>{{ collection.title }}</h2>
 {% assign list_collections = "BairesDev, TerraCotta Arte Sacra" | split: ", " %}
 {% for this_collection in list_collections %}
 {% render 'product-card', title: this_collection %}

@@ -1,1 +1,13 @@
-{% render 'featured-collection' %}
+{% render 'featured-collection', collection: section.settings.collection %}
+{% schema %}
+{
+  "name": "Featured Collection",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    }
+  ]
+}
+{% endschema %}
