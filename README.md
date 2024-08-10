@@ -8,3 +8,5 @@ This repo contains the code used to generate my web developer portfolio. I decid
 | -------- | ------------------------------------------------------------ |
 | Header   | Here I created an small menu                                 |
 | Banner   | The header of the page. Plan is to be similar to a CV header |
+
+**Store password:** pawpre
