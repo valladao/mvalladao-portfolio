@@ -16,14 +16,13 @@
         "subheading": "Shopify Web Developer"
       }
     },
-    "collection_list": {
-      "type": "collection-list",
-      "settings": {
-      }
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {}
     }
   },
   "order": [
     "banner",
-    "collection_list"
+    "featured_collection"
   ]
 }
