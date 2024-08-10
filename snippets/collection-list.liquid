@@ -1,3 +1,5 @@
 <h2>Web Developer Experience</h2>
-<a href="#">Baires Dev</a>
-<a href="#">TerraCotta Arte Sacra</a>
+{% assign list_collections = "BairesDev, TerraCotta Arte Sacra" | split: ", " %}
+{% for this_collection in list_collections %}
+{% render 'collection-card', title: this_collection %}
+{% endfor %}
