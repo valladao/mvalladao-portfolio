@@ -1,8 +1,5 @@
 {
   "sections": {
-    "header": {
-      "type": "header"
-    },
     "banner": {
       "type": "banner"
     },
@@ -11,7 +8,6 @@
     }
   },
   "order": [
-    "header",
     "banner",
     "collection_list"
   ]
