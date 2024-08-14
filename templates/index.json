@@ -18,11 +18,20 @@
     },
     "featured_collection": {
       "type": "featured-collection",
-      "settings": {}
+      "settings": {
+        "collection": "web-developer-experience"
+      }
+    },
+    "featured_collection_7VCLd8": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "education"
+      }
     }
   },
   "order": [
     "banner",
-    "featured_collection"
+    "featured_collection",
+    "featured_collection_7VCLd8"
   ]
 }
