@@ -1,4 +1,0 @@
-<h2>{{ collection.title }}</h2>
-{% for product in collection.products %}
-  {% render 'product-card', title: product.title, date: product.metafields.custom.date.value, job_title: product.metafields.custom.title.value %}
-{% endfor %}
