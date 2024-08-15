@@ -1,0 +1,25 @@
+{% render 'header', menu_items: section.blocks %}
+{% schema %}
+{
+  "name": "Header",
+  "blocks": [
+    {
+      "type": "menu-item",
+      "name": "Menu Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Header"
+    }
+  ]
+}
+{% endschema %}
