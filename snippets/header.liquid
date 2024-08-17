@@ -1,3 +1,27 @@
-{% for menu_item in menu_items %}
-  <a href="/">{{ menu_item.settings.heading }}</a>
-{% endfor %}
+<div style="
+    display: flex;
+    margin: auto;
+    max-width: 110em;
+">
+  <div style="
+    display: flex;
+    padding: 1em;
+  ">
+    Logo
+  </div>
+  <div style="
+    display: flex;
+    padding: 1em;
+  ">
+    {% for menu_item in menu_items %}
+      <a
+        href="/"
+        style="
+          padding: 0 1em;
+        "
+      >
+        {{ menu_item.settings.heading }}
+      </a>
+    {% endfor %}
+  </div>
+</div>
