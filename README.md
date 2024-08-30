@@ -4,9 +4,73 @@ This repo contains the code used to generate my web developer portfolio. I decid
 
 ## Project Structure
 
-### Gulp
+### Gulp Automation for Shopify Project
 
-Describe here about Gulp deployment
+This project uses Gulp to automate the processing of CSS, JavaScript, and Liquid files, ensuring efficient management and deployment to your Shopify store.
+
+#### Folder Structure
+
+- **Source Folders**:
+  - **Styles**: `styles/`
+    - Contains SCSS files organized into subfolders.
+    - Each subfolder contains an `index.scss` file that imports other SCSS partials.
+    - Example: `styles/header/index.scss` imports `styles/header/_variables.scss`.
+  - **Scripts**: `scripts/`
+    - Contains TypeScript files organized into subfolders.
+    - Each subfolder contains an `index.ts` file that imports other TypeScript modules.
+    - Example: `scripts/header/index.ts` imports `scripts/header/util.ts`.
+  - **Snippets Source**: `snippets-src/`
+    - Contains `.liquid` files organized into subfolders.
+    - The subfolder structure is mirrored in the output filenames.
+    - Example: `snippets-src/collection/sidebar.liquid` generates `snippets/collection-sidebar.liquid`.
+
+#### Output
+
+- **Output Folders**:
+  - **Assets**: `assets/`
+    - Compiled and minified CSS files are placed here.
+    - Compiled and minified JavaScript files are also placed here with a `.js.liquid` extension.
+  - **Snippets**: `snippets/`
+    - Processed `.liquid` files from `snippets-src` are output here.
+    - Critical CSS files are output here with a special naming convention.
+
+#### Task Descriptions
+
+- **Styles Task**:
+
+  - Compiles SCSS files from `styles/**/index.scss` into CSS.
+  - Minifies the CSS and outputs it to the `assets/` folder with the corresponding subfolder name.
+  - Example: `styles/header/index.scss` generates `assets/header.css`.
+
+- **Scripts Task**:
+
+  - Compiles TypeScript files from `scripts/**/index.ts` into JavaScript.
+  - Minifies the JavaScript and outputs it to the `assets/` folder with a `.js.liquid` extension.
+  - Example: `scripts/header/index.ts` generates `assets/header.js.liquid`.
+
+- **Snippets Task**:
+
+  - Processes Liquid files from `snippets-src/`.
+  - Flattens the folder structure by combining the subfolder name and the filename.
+  - Outputs to the `snippets/` folder.
+  - Example: `snippets-src/collection/sidebar.liquid` generates `snippets/collection-sidebar.liquid`.
+
+- **Critical CSS Task**:
+  - Compiles SCSS files from `styles/critical-css/`.
+  - Minifies the CSS and outputs it to the `snippets/` folder with the suffix `-critical-css.liquid`.
+  - Example: `styles/critical-css/hero.scss` generates `snippets/hero-critical-css.liquid`.
+
+#### Usage
+
+- **Development Mode**:
+
+  - Run `npm run dev` to start Gulp in watch mode and the Shopify development server simultaneously.
+  - Gulp will watch for changes in your source files, automatically recompile them, and output the results to the appropriate folders.
+
+- **Example Commands**:
+  - `npm run dev`: Runs Gulp in watch mode and starts Shopify development server.
+
+This setup streamlines the development workflow, ensuring that assets are properly compiled, optimized, and ready for deployment to Shopify stores.
 
 ## Shopify Sections
 
