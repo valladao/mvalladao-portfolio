@@ -68,7 +68,6 @@ gulp.task("snippets", function () {
     .pipe(gulp.dest("./snippets"))
 })
 
-// Task to compile Critical CSS to Liquid snippets
 gulp.task("critical-css", function () {
   return gulp
     .src(paths.criticalCss)
@@ -76,6 +75,7 @@ gulp.task("critical-css", function () {
     .pipe(cleanCSS())
     .pipe(
       rename(function (path) {
+        path.basename += "-critical-css"
         path.extname = ".liquid"
       })
     )
