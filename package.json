@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "dev": "gulp & shopify theme dev --store mvalladao"
+  },
   "devDependencies": {
     "gulp": "^5.0.0",
     "gulp-clean-css": "^4.3.0",
