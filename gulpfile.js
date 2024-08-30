@@ -36,16 +36,18 @@ gulp.task("scripts", function () {
     .src(paths.scripts)
     .pipe(
       ts({
-        noImplicitAny: true,
-        outFile: "output.js"
+        noImplicitAny: true
       })
     )
     .pipe(uglify())
     .pipe(
       rename(function (path) {
-        path.basename = path.dirname.replace("/", "-")
-        path.dirname = "" // Clear the directory path
-        path.extname = ".js"
+        if (path.dirname) {
+          const parts = path.dirname.split("/").filter(Boolean)
+          path.basename = parts.join("-")
+          path.dirname = ""
+        }
+        path.extname = ".js.liquid"
       })
     )
     .pipe(gulp.dest("./assets"))
