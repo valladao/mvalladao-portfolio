@@ -2,7 +2,13 @@
 
 This repo contains the code used to generate my web developer portfolio. I decided to create that as a kind of e-commerce, because in the end, it is all about it.
 
-## Project Documentation
+## Project Structure
+
+### Gulp
+
+Describe here about Gulp deployment
+
+## Shopify Sections
 
 | Sections            | Description                                                  |
 | ------------------- | ------------------------------------------------------------ |
