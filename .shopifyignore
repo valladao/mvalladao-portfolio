@@ -1,0 +1,18 @@
+# Ignore node modules
+
+node_modules/
+
+# Ignore development-only assets
+
+package.json
+package-lock.json
+
+# Ignore original development folder compiled by Gulp
+
+snippets-src/
+styles/
+scripts/
+
+# Ignore README and other documentation
+
+README.md
