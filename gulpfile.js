@@ -59,10 +59,16 @@ gulp.task("snippets", function () {
     .src(paths.snippetsSrc)
     .pipe(
       rename(function (path) {
-        path.basename = path.dirname
-          ? path.dirname.replace("/", "-")
-          : path.basename
-        path.dirname = "" // Clear the directory path
+        if (path.dirname) {
+          const parts = path.dirname.split("/").filter(Boolean)
+          if (path.basename === "index") {
+            path.basename = parts.join("-")
+          } else {
+            path.basename = parts.join("-") + "-" + path.basename
+          }
+          path.dirname = ""
+        }
+        path.extname = ".liquid"
       })
     )
     .pipe(gulp.dest("./snippets"))

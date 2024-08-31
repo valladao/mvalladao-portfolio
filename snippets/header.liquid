@@ -1,3 +1,24 @@
-{% for menu_item in menu_items %}
-  <a href="/">{{ menu_item.settings.heading }}</a>
-{% endfor %}
+{% comment %}
+  Styles defined in:
+    styles/global/header.scss
+{% endcomment %}
+
+<header id="header">
+  <div id="brand-logo" class="brandLogo">
+    {% render 'icons-logo' %}
+    {% render 'component-animated-name' %}
+  </div>
+  <nav id="menu">
+    {% for menu_item in menu_items %}
+      <a href="/">
+        {{ menu_item.settings.heading }}
+      </a>
+    {% endfor %}
+  </nav>
+  <div id="nav-icons">
+    {% render 'icons-social-linkedin' %}
+    {% render 'icons-social-github' %}
+    {% render 'icons-other-pdf' %}
+    {% render 'icons-search' %}
+  </div>
+</header>

@@ -21,8 +21,10 @@ This project uses Gulp to automate the processing of CSS, JavaScript, and Liquid
     - Example: `scripts/header/index.ts` imports `scripts/header/util.ts`.
   - **Snippets Source**: `snippets-src/`
     - Contains `.liquid` files organized into subfolders.
-    - The subfolder structure is mirrored in the output filenames.
-    - Example: `snippets-src/collection/sidebar.liquid` generates `snippets/collection-sidebar.liquid`.
+    - The subfolder structure is mirrored in the output filenames by combining the directory names with the filename.
+    - Special Handling for `index.liquid`: Files named `index.liquid` will use only the folder name for the output filename, without the `index` part.
+    - Example: `snippets-src/component/animated-name.liquid` generates `snippets/component-animated-name.liquid`.
+    - Example: `snippets-src/header/index.liquid` generates `snippets/header.liquid`.
 
 #### Output
 
@@ -32,7 +34,10 @@ This project uses Gulp to automate the processing of CSS, JavaScript, and Liquid
     - Compiled and minified JavaScript files are also placed here with a `.js.liquid` extension.
   - **Snippets**: `snippets/`
     - Processed `.liquid` files from `snippets-src` are output here.
-    - Critical CSS files are output here with a special naming convention.
+    - The full path structure is reflected in the filename by combining subfolder names with the file's basename.
+    - Files named `index.liquid` generate filenames based only on the folder name.
+    - Example: `snippets-src/component/animated-name.liquid` generates `snippets/component-animated-name.liquid`.
+    - Example: `snippets-src/header/index.liquid` generates `snippets/header.liquid`.
 
 #### Task Descriptions
 
@@ -51,9 +56,11 @@ This project uses Gulp to automate the processing of CSS, JavaScript, and Liquid
 - **Snippets Task**:
 
   - Processes Liquid files from `snippets-src/`.
-  - Flattens the folder structure by combining the subfolder name and the filename.
+  - Combines subfolder names with the file's basename to create a flattened but descriptive filename.
+  - Special handling for `index.liquid`: If a file is named `index.liquid`, only the folder name will be used for the output filename.
   - Outputs to the `snippets/` folder.
-  - Example: `snippets-src/collection/sidebar.liquid` generates `snippets/collection-sidebar.liquid`.
+  - Example: `snippets-src/component/animated-name.liquid` generates `snippets/component-animated-name.liquid`.
+  - Example: `snippets-src/header/index.liquid` generates `snippets/header.liquid`.
 
 - **Critical CSS Task**:
   - Compiles SCSS files from `styles/critical-css/`.
@@ -74,9 +81,16 @@ This setup streamlines the development workflow, ensuring that assets are proper
 
 ## Shopify Sections
 
+### Static Sections
+
+| Sections | Description                                                                                             |
+| -------- | ------------------------------------------------------------------------------------------------------- |
+| Header   | This static section you use to set everything that you want to theme header. That will be in all pages. |
+
+### Dynamic Sections
+
 | Sections            | Description                                                  |
 | ------------------- | ------------------------------------------------------------ |
-| Header              | Here I created an small menu                                 |
 | Banner              | The header of the page. Plan is to be similar to a CV header |
 | Featured Collection | A section to expose all products inside a collection         |
 
