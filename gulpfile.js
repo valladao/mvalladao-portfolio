@@ -62,13 +62,13 @@ gulp.task("snippets", function () {
         if (path.dirname) {
           const parts = path.dirname.split("/").filter(Boolean)
           if (path.basename === "index") {
-            path.basename = parts.join("-") // Use only the folder name(s) if the file is index.liquid
+            path.basename = parts.join("-")
           } else {
-            path.basename = parts.join("-") + "-" + path.basename // Combine folder names with the filename if not index
+            path.basename = parts.join("-") + "-" + path.basename
           }
-          path.dirname = "" // Clear the directory path to ensure it outputs in the root snippets folder
+          path.dirname = ""
         }
-        path.extname = ".liquid" // Ensure the extension is .liquid
+        path.extname = ".liquid"
       })
     )
     .pipe(gulp.dest("./snippets"))

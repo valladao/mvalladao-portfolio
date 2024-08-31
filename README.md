@@ -81,9 +81,16 @@ This setup streamlines the development workflow, ensuring that assets are proper
 
 ## Shopify Sections
 
+### Static Sections
+
+| Sections | Description                                                                                             |
+| -------- | ------------------------------------------------------------------------------------------------------- |
+| Header   | This static section you use to set everything that you want to theme header. That will be in all pages. |
+
+### Dynamic Sections
+
 | Sections            | Description                                                  |
 | ------------------- | ------------------------------------------------------------ |
-| Header              | Here I created an small menu                                 |
 | Banner              | The header of the page. Plan is to be similar to a CV header |
 | Featured Collection | A section to expose all products inside a collection         |
 
