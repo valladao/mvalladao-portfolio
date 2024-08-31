@@ -1,33 +1,84 @@
+/* Default Mobile Styles */
 header {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-areas:
+    "brand-logo nav-icons"
+    "menu menu";
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
   align-items: center;
   margin: auto;
+  padding: 0.5em 1em;
   max-width: 110em;
 }
 
 header div,
 header nav {
   display: flex;
-  padding: 1em;
+  padding: 0.5em 0;
 }
 
-header div:first-of-type {
-  justify-self: start;
+#brand-logo {
+  grid-area: brand-logo;
 }
 
-header nav {
-  justify-self: center;
+#menu {
+  grid-area: menu;
+  justify-content: center;
 }
 
-header div:last-of-type {
-  justify-self: end;
+#nav-icons {
+  grid-area: nav-icons;
+  justify-content: flex-end;
 }
 
+/* Center align menu items */
 header nav a {
-  padding: 0 1em;
+  padding: 0.5em 1em;
 }
 
+/* Adjust logo size for mobile */
 .brandLogo svg {
-  width: 2em;
+  width: 1.5em;
+}
+
+#nav-icons > svg:not(:last-child) {
+  display: none;
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+  header {
+    grid-template-areas: "brand-logo menu nav-icons";
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto;
+    padding: 1em;
+  }
+
+  #menu {
+    justify-content: center;
+  }
+
+  header div:first-of-type {
+    justify-self: start;
+  }
+
+  header div:last-of-type {
+    justify-self: end;
+  }
+
+  /* Adjust padding for desktop */
+  header div,
+  header nav {
+    padding: 1em;
+  }
+
+  /* Adjust logo size for desktop */
+  .brandLogo svg {
+    width: 2em;
+  }
+
+  #nav-icons > svg:not(:last-child) {
+    display: block;
+  }
 }
