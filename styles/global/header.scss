@@ -46,11 +46,10 @@ header nav a {
   display: none;
 }
 
-/* Desktop Styles */
+/* Mid screens and Desktop Styles */
 @media (min-width: 769px) {
   header {
     grid-template-areas: "brand-logo menu nav-icons";
-    grid-template-columns: 1fr auto 1fr;
     grid-template-rows: auto;
     padding: 1em;
   }
@@ -80,5 +79,12 @@ header nav a {
 
   #nav-icons > svg:not(:last-child) {
     display: block;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1025px) {
+  header {
+    grid-template-columns: 1fr auto 1fr;
   }
 }
