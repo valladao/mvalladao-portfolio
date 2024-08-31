@@ -1,1 +1,3 @@
-console.log("TypeScript working!")
+const message: string = "TypeScript working!"
+
+console.log(message)

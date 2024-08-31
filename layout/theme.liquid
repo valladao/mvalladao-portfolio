@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  {% render 'css-reset' %}
-  {% render 'global-styles' %}
+  <style>{% render 'global-critical-css' %}</style>
   {{ content_for_header }}
 </head>
 <body>
   {% section 'header' %}
   {{ content_for_layout }}
+  <script defer src="{{ 'global.js' | asset_url }}"></script>
 </body>
 </html>
