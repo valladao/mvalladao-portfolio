@@ -1,0 +1,33 @@
+header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  margin: auto;
+  max-width: 110em;
+}
+
+header div,
+header nav {
+  display: flex;
+  padding: 1em;
+}
+
+header div:first-of-type {
+  justify-self: start;
+}
+
+header nav {
+  justify-self: center;
+}
+
+header div:last-of-type {
+  justify-self: end;
+}
+
+header nav a {
+  padding: 0 1em;
+}
+
+.brandLogo svg {
+  width: 2em;
+}
