@@ -9,13 +9,6 @@
 */
 {
   "sections": {
-    "banner": {
-      "type": "banner",
-      "settings": {
-        "heading": "Manoel Valladão",
-        "subheading": "Shopify Web Developer"
-      }
-    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -30,7 +23,6 @@
     }
   },
   "order": [
-    "banner",
     "featured_collection",
     "featured_collection_7VCLd8"
   ]

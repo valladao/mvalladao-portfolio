@@ -25,6 +25,13 @@
         ],
         "settings": {
         }
+      },
+      "banner": {
+        "type": "banner",
+        "settings": {
+          "heading": "Manoel Valladão",
+          "subheading": "Hello! I present here my developer portfolio. As I am a E-commerce developer I created this as a Shopify e-commerce website. Feel free to get in touch if you have any questions."
+        }
       }
     },
     "content_for_index": [
