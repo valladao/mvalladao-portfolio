@@ -16,12 +16,26 @@
           "menu_item_9bUf7C": {
             "type": "menu-item",
             "settings": {
-              "heading": "Home"
+              "heading": "Shopify Dev"
+            }
+          },
+          "menu_item_83QUWf": {
+            "type": "menu-item",
+            "settings": {
+              "heading": "JavaScript Dev"
+            }
+          },
+          "menu_item_HVmxaG": {
+            "type": "menu-item",
+            "settings": {
+              "heading": "Web Dev"
             }
           }
         },
         "block_order": [
-          "menu_item_9bUf7C"
+          "menu_item_9bUf7C",
+          "menu_item_83QUWf",
+          "menu_item_HVmxaG"
         ],
         "settings": {
         }
