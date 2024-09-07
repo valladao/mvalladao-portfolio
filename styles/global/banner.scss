@@ -1,0 +1,5 @@
+.banner {
+  background-color: #a0a19a;
+  background-image: url('{{ "bright-squares_textures.png" | asset_img_url: "original" }}'); /* Texture image */
+  padding: 50px;
+}
