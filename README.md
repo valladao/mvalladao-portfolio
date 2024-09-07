@@ -2,6 +2,15 @@
 
 This repo contains the code used to generate my web developer portfolio. I decided to create that as a kind of e-commerce, because in the end, it is all about it.
 
+After install xxxxx, use the following command do activate it:
+
+```bash
+shopify theme dev --store mvalladao
+```
+
+Before release, you can use the password:
+**Store password:** pawpre
+
 ## Project Structure
 
 ### Gulp Automation for Shopify Project
@@ -93,5 +102,3 @@ This setup streamlines the development workflow, ensuring that assets are proper
 | ------------------- | ------------------------------------------------------------ |
 | Banner              | The header of the page. Plan is to be similar to a CV header |
 | Featured Collection | A section to expose all products inside a collection         |
-
-**Store password:** pawpre
