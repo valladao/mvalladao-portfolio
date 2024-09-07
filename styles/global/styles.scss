@@ -7,7 +7,7 @@
 
 body {
   background-color: #cfcfcd;
-  background-image: url('{{ "dust_textures.png" | asset_img_url: "original" }}'); /* Texture image */
+  background-image: url('{{ "dust_texture.png" | asset_img_url: "original" }}'); /* Texture image */
 }
 
 h1 {
